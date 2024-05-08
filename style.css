@@ -1,0 +1,1242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(232, 232, 232);
+    height: 3000px;
+    margin-top: 80px;
+}
+
+/*-------------header section-------------*/
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.head1{
+    background-color: #fffe;
+    height: 70px;
+    width: 430px;
+    margin-left: 20px;
+    margin-right: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 30px;
+    width: 330px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.search-bar::placeholder{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    padding-left: 43px;
+    padding-top: 12px;
+    height: 50px;
+    color: rgb(111, 111, 111);
+    background-color: rgb(232, 232, 232);
+}
+
+.pisbok-logo{
+    width: 53px;
+    border-radius: 50%;
+    margin-right: -14px;
+}
+
+.bx-search{
+    transform: translate(37px);
+    font-size: 25px;
+    color: rgb(144, 144, 144);
+    display: inline-block;
+}
+
+.head2{
+    background-color: #fff;
+    height: 70px;
+    flex: 1;
+    margin-right: 330px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.home,
+.video,
+.marketplace,
+.game{
+   font-size: 40px;
+   position: relative;
+   transition: all 0.15s;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   border-radius: 10px;
+}
+
+.homies,
+.vidoyos,
+.stores-niya,
+.gamoso{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.homies .tooltrip,
+.vidoyos .tooltrip,
+.stores-niya .tooltrip,
+.gamoso .tooltrip{
+    position: absolute;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all 0.15s;
+    pointer-events: none;
+    bottom: -44px;
+}
+
+.homies:hover .tooltrip,
+.vidoyos:hover .tooltrip,
+.stores-niya:hover .tooltrip,
+.gamoso:hover .tooltrip{
+    opacity: 1;
+}
+
+.home:hover,
+.video:hover,
+.marketplace:hover,
+.game:hover{
+    background-color: rgb(234, 234, 234);
+}
+
+.bx-home-alt::after,
+.bx-slideshow::after,
+.bx-store::after,
+.bx-joystick::after{
+    content: '';
+    padding-left: 66px;
+    padding-right: 66px;
+    height: 4px;
+    position: absolute;
+    background-color: blue;
+    left: 5px;
+    bottom: -10px;
+    opacity: 0;
+    transition: all 0.15s;
+}
+
+.bx-home-alt:hover::after,
+.bx-slideshow:hover::after,
+.bx-store:hover::after,
+.bx-joystick:hover::after{
+    opacity: 1;
+}
+
+.head3{
+    background-color: #fff;
+    height: 70px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.side-profile{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.bxs-grid,
+.bxl-messenger,
+.bxs-bell{
+    font-size: 35px;
+    background-color: rgb(234, 234, 234);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    transform: all 0.20s;
+    align-items: center;
+}
+
+.menues,
+.messengeros,
+.berro,
+.porofayro{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 200;
+}
+
+.menues .tooltip,
+.messengeros .tooltip,
+.berro .tooltip,
+.porofayro .tooltip{
+    position: absolute;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: all 0.15s;
+    pointer-events: none;
+    bottom: -30px;
+}
+
+.menues:hover .tooltip,
+.messengeros:hover .tooltip,
+.berro:hover .tooltip,
+.porofayro:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bxs-grid:hover,
+.bxl-messenger:hover,
+.bxs-bell:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.bxs-grid:active,
+.bxl-messenger:active,
+.bxs-bell:active{
+    background-color: rgb(212, 212, 212);
+}
+
+/*-------------left container section--------------*/
+
+.left-side-bar::-webkit-scrollbar{
+    width: 0.59vw;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.left-side-bar::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.left-side-bar::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(184, 184, 184)
+}
+
+.left-side-bar::-webkit-scrollbar-track{
+    width: 10px;
+}
+
+.left-side-bar::-webkit-scrollbar-track:hover{
+    background-color: rgba(245, 245, 245, 0.574);
+}
+
+.left-side-bar{
+    background-color: transparent;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 370px;
+    display: grid;
+    color: rgb(59, 57, 57);
+    font-size: 23px;
+    overflow: auto;
+    overflow-x: hidden;
+    z-index: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.left-side{
+    position: relative;
+    top: 6px;
+    left: 25px;
+}
+
+.username{
+    position: relative;
+    top: -27px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.pisbok-user{
+    display: inline-block;
+    padding-bottom: -500px;
+    width: 360px;
+    transition: all 0.15s;
+    height: 60px;
+    border-radius: 12px;
+    position: relative;
+    top: 15px;
+    left: -20px;
+}
+
+.pisbok-user:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.user{
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+    margin-left: 17px;
+}
+
+.friend{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.friendo{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.friends{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 10px;
+    left: -20px;
+}
+
+.friends:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.feeds{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 14px;
+    left: -20px;
+}
+
+.feeds:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.feed{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.feedo{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.groups{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 18px;
+    left: -20px;
+}
+
+.groups:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.group{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.groupo{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.stores{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 19px;
+    left: -20px;
+}
+
+.stores:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.store{
+    width: 30px;
+    position: relative;
+    top: 12px;
+    margin-left: 22px
+}
+
+.storo{
+    position: relative;
+    top: -21px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.pages{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top:22px;
+    left: -20px;
+}
+
+.pages:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.page{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.pago{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.saved{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 25px;
+    left: -20px;
+}
+
+.saved:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.save{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.savo{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.memories{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 28px;
+    left: -20px;
+}
+
+.memories:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.memory{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.memoro{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.videos{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 31px;
+    left: -20px;
+}
+
+.videos:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.videoko{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px
+}
+
+.Vido{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.messengeres{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 35px;
+    left: -20px;
+}
+
+.messengeres:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.messengerese{
+    width: 35px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px;
+    left: 3px;
+}
+
+.messego{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.down-arrow{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 43px;
+    left: -20px;
+}
+
+.down-arrow:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.bx-chevron-down{
+    width: 35px;
+    position: relative;
+    top: 7px;
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 17px;
+    left: 3px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 50%;
+}
+
+.see-more{
+    position: relative;
+    top: -26px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.under-line{
+    border-bottom: 2px solid rgb(170, 170, 170);
+    position: relative;
+    top: 55px;
+}
+
+.shortcuts{
+    position: relative;
+    top: 70px;
+    color: rgb(88, 88, 88);
+    font-size: 23px;
+    letter-spacing: 0;
+}
+
+.eight-ball{
+    width: 360px;
+    transition: all 0.15s;
+    height: 55px;
+    border-radius: 12px;
+    position: relative;
+    top: 85px;
+    left: -20px;
+}
+
+.eight-ball:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.ball{
+    width: 35px;
+    position: relative;
+    top: 7px;
+    margin-left: 17px;
+    left: 3px;
+}
+
+.pool{
+    position: relative;
+    top: -29px;
+    left: 50px;
+    margin-left: 17px
+}
+
+.fereces{
+    position: relative;
+    top: 90px;
+    font-size: 17px;
+    user-select: none;
+}
+
+.bxl-play-store{
+    position: relative;
+    top: 2px;
+}
+
+.ad{
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
+.ad:hover{
+    text-decoration: underline;
+}
+
+/*---------------right side container section----------------*/
+
+.right-side-bar::-webkit-scrollbar{
+    width: 0.59vw;
+}
+
+.right-side-bar::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.right-side-bar::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(184, 184, 184)
+}
+
+.right-side-bar::-webkit-scrollbar-track{
+    width: 10px;
+}
+
+.right-side-bar::-webkit-scrollbar-track:hover{
+    background-color: rgba(245, 245, 245, 0.574);
+}
+
+.right-side-bar{
+    background-color: rgb(232, 232, 232);
+    position: fixed;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    width: 430px;
+    display: grid;
+    color: rgb(59, 57, 57);
+    font-size: 23px;
+    overflow-x: hidden;
+    z-index: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right-side{
+    background-color: rgb(232, 232, 232);
+    position: relative;
+    left: 5px;
+    top: 20px;
+}
+
+.birthday{
+    position: relative;
+    left: 10px;
+    font-weight: 650;
+    color: rgb(93, 93, 93);
+    font-size: 23px;
+    top: -10px;
+}
+
+.bday-celeb{
+    width: 360px;
+    transition: all 0.15s;
+    height: 60px;
+    border-radius: 12px;
+    position: relative;
+    top: 14px;
+    left: -10px;
+    color: rgb(99, 99, 99);
+    font-size: 19px;
+    font-weight: 500;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.bday-celeb:hover{
+    background-color: rgb(224, 218, 218);
+}
+
+.bday{
+    width: 40px;
+    position: relative;
+    top: -18px;
+    margin-left: 17px
+}
+
+.your-bday{
+    position: relative;
+    top: -80px;
+    left: 50px;
+    margin-left: 17px
+}
+
+span{
+    color: rgb(15, 15, 15);
+}
+
+.anadaline{
+    background-color: transparent;
+    border-bottom: 0.40px solid grey;
+    position: relative;
+    top: 20px;
+    left: 7px;
+    width: 340px;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    top: 37px;
+    left: 28px;
+    color: rgb(90, 90, 90);
+}
+
+.bx-search{
+    position: relative;
+    left: 0px;
+    color: rgb(57, 57, 57);
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 5px;
+    border-radius: 50%;
+    transition: all 0.20s;
+}
+
+.bx-search:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.bx-dots-horizontal-rounded{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    transition: all 0.20s;
+}
+
+.bx-dots-horizontal-rounded:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.contact{
+    position: relative;
+    left: -70px;
+    color: grey;
+    font-size: 23px;
+}
+
+.lawyenz{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 20px;
+}
+
+.lawyenz:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.yenx{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.law{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.mayamg{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.mayamg:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.may{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.yang{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.genie{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.genie:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.gene{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.genes{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.algonint{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.algonint:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.alj{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.aljon{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.brentoy{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.brentoy:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.brent{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.brente{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.kenshin{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.kenshin:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.kim{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.kimo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.rhamboo{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.rhamboo:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.rham{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.rhambo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.junalisa{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.junalisa:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.juna{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.junals{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.dan-brave{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.dan-brave:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.dan{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.dano{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.mitsukihara{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.mitsukihara:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.fritz{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.fritzo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.tualjer{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.tualjer:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.tual{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.tualo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.cyril-clyde{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.cyril-clyde:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.clyde{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.cy{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.roldan{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 37px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: all 0.20s;
+    border-radius: 15px;
+}
+
+.roldan:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.rol{
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+
+.rold{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    left: 15px;
+}
+
+.last-line{
+    background-color: transparent;
+    border-top: 1px solid grey;
+    position: relative;
+    top: 45px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 620;
+    letter-spacing: 1px;
+}
